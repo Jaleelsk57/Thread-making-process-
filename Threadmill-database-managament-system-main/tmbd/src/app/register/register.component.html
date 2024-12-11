@@ -1,0 +1,160 @@
+ <!--  <app-nav></app-nav>
+<body>
+<div class="form">
+    <div>
+      <label for="med_code">ID</label>
+      <input type="text" id="med_code" name="ID" [(ngModel)]="User.ID" required>
+    </div>
+    
+    <div>
+      <label for="disease_name">TOC</label>
+      <input type="text" id="disease_name" name="TOC" [(ngModel)]="User.TOC" required>
+    </div>
+    
+    <div>
+      <label for="med_name">QIN</label>
+      <input type="text" id="med_name" name="QIN" [(ngModel)]="User.QIN" required>
+    </div>
+    
+    <div>
+      <label for="dosage">ETWC</label>
+      <input type="text" id="dosage" name="ETWC"  [(ngModel)]="User.ETWC" required>
+    </div>
+    <div>
+        <label for="dosage">location</label>
+        <input type="text" id="dosage" name="LOC"  [(ngModel)]="User.LOC" required>
+      </div>
+    <button type="submit" (click)="Insert()">Insert</button>&nbsp;&nbsp;&nbsp;
+    <button type="submit" (click)="Delete()">Delete</button>&nbsp;&nbsp;&nbsp;
+    <button type="submit" (click)="update()">Update</button>&nbsp;&nbsp;&nbsp;
+    <button type="submit" (click)="Read()">Read</button>
+    </div>
+  </body> 
+   -->
+   <!--
+   <div class="d-block mx-auto w-50">
+    <label for="ID">
+    </label>
+    <input type="text" name="ID" id="ID" class="form-control" [(ngModel)]="ID"
+        placeholder="Ex:20471A05..">
+    <div class="d-flex my-2">
+        <input type="submit" value="Get all" class="btn btn-primary" (click)="Read('All')">
+        <input type="submit" [value]="'Get '+ ID
+        " class="btn btn-primary mx-1" (click)="Read(ID)">
+    </div>
+    <p *ngIf="!(Results.length!=0 && GotResult)" class="text-danger">No Result to Show</p>
+</div>
+<table class="table w-50  mx-auto" *ngIf="Results.length!=0 && GotResult">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">TOC</th>
+            <th scope="col">QIN</th>
+            <th scope="col">ETWC</th>
+            <th scope="col">LOC</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Data of Results">
+            <th scope="row">{{Data[0]}}</th>
+            <td>{{Data[1]}}</td>
+            <td>{{Data[2]}}</td>
+            <td>{{Data[3]}}</td>
+            <td>{{Data[4]}}</td>
+            
+            <td><input type="button" role="button" class="btn btn-danger" value="delete" (click)="Delete(Data[0])">
+            </td>
+            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="ID = Data[0]">
+                    Update
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Updated Values</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" name="TOC" id="TOC" placeholder="Name" class="form-control my-1" [(ngModel)]="UpdatedUser.TOC">
+          <input type="text" name="QIN" id="QIN" placeholder="Name" class="form-control my-1" [(ngModel)]="UpdatedUser.QIN">
+          <input type="text" name="ETWC" id="ETWC" placeholder="Name" class="form-control my-1" [(ngModel)]="UpdatedUser.ETWC">
+          <input type="text" name="LOC" id="LOC" placeholder="Name" class="form-control my-1" [(ngModel)]="UpdatedUser.LOC">
+          <input type="text" name="ID" id="ID" placeholder="ID" class="form-control my-1" [(ngModel)]="UpdatedUser.ID">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="Update(ID,UpdatedUser)">Save changes</button>
+        </div>
+      </div>
+
+  </div>
+  
+
+ -->
+<app-nav></app-nav>
+
+<!-- <app-insert></app-insert> -->
+<div class="d-block mx-auto w-50 mt-5 p-4">
+  <label for="ID">ID</label>
+  <input type="text" name="ID" id="ID" class="form-control" [(ngModel)]="ID"
+      placeholder="ID number">
+  <div class="d-flex my-2">
+      <input type="submit" value="Get all" class="btn btn-primary" (click)="Readd('All')">
+      <input type="submit" [value]="'Get '+ ID" class="btn btn-primary mx-1" (click)="Read('ID')">
+<!-- <input type="Insert" [value]="Insert" class="btn btn-primary mx-1" (click)="Read('ID')"> -->
+  </div>
+  <p *ngIf="!(Results.length!=0 && GotResult)" class="text-danger">No Result to Show</p>
+</div>
+<table class="table w-50  mx-auto" *ngIf="Results.length!=0 && GotResult">
+  <thead class="thead-dark">
+      <tr>
+          <th scope="col">ID</th>
+          <th scope="col">TOC</th>
+          <th scope="col">QIN</th>
+          <th scope="col">ETWC</th>
+          <th scope="col">LOC</th>
+          <th scope="col">Delete</th>
+          <th scope="col">Update</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let Data of Results">
+          <th scope="row">{{Data[0]}}</th>
+          <td>{{Data[1]}}</td>
+          <td>{{Data[2]}}</td>
+          <td>{{Data[3]}}</td>
+          <td>{{Data[4]}}</td>
+          <td><input type="button" role="button" class="btn btn-danger" value="delete" (click)="Delete(Data[0])">
+          </td>
+          <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="ID = Data[0]">
+                  Update
+              </button>
+          </td>
+      </tr>
+  </tbody>
+</table>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Updated Values</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" name="ID" id="ID" placeholder="ID Number" class="form-control my-1" [(ngModel)]="UpdatedUser.ID">
+        <input type="text" name="TOC" id="TOC" placeholder="Type of cotton" class="form-control my-1" [(ngModel)]="UpdatedUser.TOC">
+        <input type="text" name="QIN" id="QIN" placeholder="Quantity of thread produced" class="form-control my-1" [(ngModel)]="UpdatedUser.QIN">
+        <input type="text" name="ETWC" id="ETWC" placeholder="Expoet to which company" class="form-control my-1" [(ngModel)]="UpdatedUser.ETWC">
+        <input type="text" name="LOC" id="LOC" placeholder="Location of cotton factory" class="form-control my-1" [(ngModel)]="UpdatedUser.LOC">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="Update()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

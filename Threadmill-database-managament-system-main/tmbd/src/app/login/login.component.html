@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form Validation</title>
+</head>
+<body>
+    <div class="i1">
+  <div class="container">
+    <h1>Login</h1>
+    <form id="login-form" routerLink="/home">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      
+      <div class="form-group">
+     <button type="submit" routerLink="/home">Login</button>
+      
+      </div>
+    </form>
+  </div>
+  </div>
+</body>
+</html>
+<router-outlet></router-outlet>
+
+
+
+ login() {
+  this.http.post('http://localhost:3000/login', { username: this.username, password: this.password })
+    .subscribe((response: any) => {
+      console.log(response);
+      // Handle the login response
+      if (response.success) {
+        this.router.navigate(['/home']);
+      } else {
+        // Handle invalid credentials
+      }
+      });
+  }  -->
+<app-all1></app-all1>
+
+
+    <div class="container">
+      <div class="wrapper">
+        <div class="title"><span>Login Form</span></div>
+        <form action="/home">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" name="name" placeholder="Username" class="form-control"  [(ngModel)]="User.name" required>
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="pass" placeholder="Password" class="form-control"  [(ngModel)]="User.pass" required>
+          </div>
+          <div class="pass"><a href="#">Forgot password?</a>
+            </div>
+          <div class="row button">
+            <a  routerLink="/home">Login</a>
+            <!-- <button mat-button routerLink="/home">LOGIN</button> -->
+            <!-- <input type="submit" value="Login" (click)="Read()" > -->
+          </div>
+          
+        </form>
+
+  
+      </div>
+    </div>

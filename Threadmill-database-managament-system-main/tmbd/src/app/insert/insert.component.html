@@ -1,0 +1,49 @@
+<!-- 
+<div class="form-group w-50 d-block mx-auto">
+  <label for="ID" class="form-label">ID:</label>
+  <input type="text" name="ID" id="ID" class="form-control" [(ngModel)]="User.ID">
+  <label for="TOC" class="form-label">TOC:</label>
+  <input type="text" name="TOC" id="TOC" class="form-control" [(ngModel)]="User.TOC">
+  <label for="QIN" class="form-label">QIN:</label>
+  <input type="text" name="QIN" id="QIN" class="form-control" [(ngModel)]="User.QIN">
+  <label for="ETWC" class="form-label">ETWC:</label>
+  <input type="text" name="ETWC" id="ETWC" class="form-control" [(ngModel)]="User.ETWC">
+  <label for="LOC" class="form-label">LOC:</label>
+  <input type="text" name="LOC" id="LOC" class="form-control" [(ngModel)]="User.LOC">
+  <input type="submit" value="Insert" class="btn btn-success my-2" (click)="Insert()">
+  
+
+   *ngIf="!(SuccessMsg =='')" the line Says that if the SuccessMsg variable is empty the hide this 
+      if the content. If not show this div....
+
+      
+      So SuccessMsg == '' ==> Gives true if the variable is fitted to Content at the line
+      this.Success = Data.Message in the ts file
+     
+
+</div>   -->
+<app-nav></app-nav>
+<div class="form-group w-50 d-block mx-auto mt-5 p-4">
+  <label for="ID" class="form-label">ID:</label>
+  <input type="text" name="ID" id="ID"  placeholder="ID Number" class="form-control" [(ngModel)]="User.ID">
+  <label for="TOC" class="form-label">TOC:</label>
+  <input type="text" name="TOC" id="TOC" class="form-control"  placeholder="Type of cotton" [(ngModel)]="User.TOC">
+  <label for="QIN" class="form-label">QIN:</label>
+  <input type="text" name="QIN" id="QIN" class="form-control"  placeholder="Quantity of thread produced" [(ngModel)]="User.QIN">
+  <label for="ETWC" class="form-label">ETWC:</label>
+  <input type="text" name="ETWC" id="ETWC" class="form-control"  placeholder="Export to which company" [(ngModel)]="User.ETWC">
+  <label for="LOC" class="form-label">LOC:</label>
+  <input type="text" name="LOC" id="LOC" class="form-control" placeholder="Location of factory" [(ngModel)]="User.LOC">
+  <input type="submit" value="Insert" class="btn btn-success my-2" (click)="Insert()">
+  <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+  <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+
+  <!-- *ngIf="!(SuccessMsg =='')" the line Says that if the SuccessMsg variable is empty the hide this 
+      if the content. If not show this div....
+
+      
+      So SuccessMsg == '' ==> Gives true if the variable is fitted to Content at the line
+      this.Success = Data.Message in the ts file
+      -->
+
+</div>

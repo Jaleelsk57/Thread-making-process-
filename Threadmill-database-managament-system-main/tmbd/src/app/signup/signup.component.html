@@ -1,0 +1,88 @@
+<!-- 
+<body>
+  <title>Signup Form Validation</title>
+
+
+    <div class="i1">
+  <div class="container">
+    <h1>Signup</h1>
+    <form id="signup-form" action="/login">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <span class="error-message">Username is required</span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message">Email is required and must be valid</span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <span class="error-message">Password is required</span>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <span class="error-message">Passwords must match</span>
+      </div>
+      
+      <div class="form-group" >
+        <button type="submit" routerLink="/login">Signup</button>
+      
+    </div>
+    </form>
+  </div>
+</div>
+</body> -->
+<!-- <app-all1></app-all1>
+
+<body>
+  <div class="wrapper">
+    <h2>Registration</h2>
+    <form >
+      <div class="input-box">
+        <input type="text"  name="name" placeholder="Enter your name" class="form-control"  [(ngModel)]="User.name" pattern=".{5,}" required >
+      </div>
+      <div class="input-box">
+        <input type="text" name="email" placeholder="Enter your email" class="form-control"  [(ngModel)]="User.email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+      </div>
+      <div class="input-box">
+        <input type="password"  name="pass" placeholder="Create password" class="form-control"  [(ngModel)]="User.pass" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+      </div>
+      <div class="input-box">
+        <input type="password" name="rpass" placeholder="Confirm password" class="form-control"  [(ngModel)]="User.rpass" required>
+      </div>
+      <div class="input-box button">
+        <input type="Submit" value="Register Now" (click)="Insert()" routerLink="/login">
+      </div>
+      
+    </form>
+  </div>
+</body> -->
+<app-all1></app-all1>
+
+<body>
+  <div class="wrapper">
+    <h2>Registration</h2>
+    <form RouterLink="/login">
+      <div class="input-box">
+        <input type="text"  name="name" placeholder="Enter your name" class="form-control"  [(ngModel)]="User.name" pattern=".{5,}" required >
+      </div>
+      <div class="input-box">
+        <input type="text" name="email" placeholder="Enter your email" class="form-control"  [(ngModel)]="User.email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+      </div>
+      <div class="input-box">
+        <input type="password"  name="pass" placeholder="Create password" class="form-control"  [(ngModel)]="User.pass" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+      </div>
+      <div class="input-box">
+        <input type="password" name="rpass" placeholder="Confirm password" class="form-control"  [(ngModel)]="User.rpass" required>
+      </div>
+      <div class="input-box button">
+        <input type="Submit" value="Register Now" (click)="Insert()" routerLink="/login">
+      </div>
+      
+    </form>
+  </div>
+</body>

@@ -1,0 +1,156 @@
+<app-nav></app-nav>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #333;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    main {
+      margin: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .contact-details {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .contact-details div {
+      flex: 1;
+    }
+
+    .contact-details ul {
+      padding-left: 20px;
+      list-style-type: none;
+    }
+
+    .contact-details p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>If you have any questions or inquiries, please feel free to contact us using the form below:</p>
+      <form id="contact-form" action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="contact-details">
+      <div class="n1">
+        <p>Mobile Numbers:</p>
+        <ul>
+          <li>+1 555-123-4567</li>
+          <li>+44 1234-567890</li>
+          <li>+61 2 1234-5678</li>
+          <li>+91 98765-43210</li>
+        </ul>
+      </div>
+      <div class="n2">
+        <p>Emails:</p>
+        <ul>
+          <li>john.doe@example.com</li>
+          <li>jane.smith@example.com</li>
+          <li>info@example.com</li>
+          <li>contact@example.com</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Company</p>
+  </footer>
+</body>
+
+</html>
